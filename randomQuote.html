@@ -29,7 +29,9 @@
 <script src ="randomQuote.js"></script>
    
 <style> 
-
+.well{
+	border-radius: 20px solid black;
+}
 .display-box{
 	padding: 100px 30px 50px 30px;
 	margin: 10px 20px 10px 20px;
@@ -51,12 +53,12 @@
 	<div class ="container-fluid">
 		<h1 >Random Quote Machine</h1>
 		<div class ="row">
-			<div class = "display-box">
+			<div class = "display-box" id="box">
 				<div  class ="well" id ="message"> </div>
 
-				<button class = "btn btn-primary" type ="button" onclick="quoteButton()"> get quote</button>
+				<button class = "btn btn-primary" type ="button" onclick="getRandomQuote()"> get quote</button>
 
-				<button class= "btn " type ="button" onclick ="tweetIt()">Tweet
+				<button class= "btn btn-info" type ="button" onclick ="tweetIt()">Tweet
 				</button>
 
 			</div>
