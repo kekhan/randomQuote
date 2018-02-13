@@ -13,6 +13,7 @@ function getRandomQuote(){
             }
         }
     };
+    var url2 = "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
     var url = 'https://api.chucknorris.io/jokes/random';
     myRequest.open('GET',url,true);
     myRequest.send(null);
