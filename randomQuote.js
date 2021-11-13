@@ -1,26 +1,21 @@
+function responseRequest(){
+  var myRequest= new XMLHttpRequest();
+  var url = 'https://ron-swanson-quotes.herokuapp.com/v2/quotes';
 
-var myRequest= new XMLHttpRequest();
-function getRandomQuote(){
-    var myRequest= new XMLHttpRequest();
-    myRequest.onreadystatechange = function(){
-        if(myRequest.readyState === XMLHttpRequest.DONE){
-            if(myRequest.status < 400){
-                var str = JSON.parse(myRequest.responseText);
-                var quote = str.value;
-                quoteButton(quote);
 
-                
-            }
-        }
-    };
-    var url2 = "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
-    var url = 'https://api.chucknorris.io/jokes/random';
-    myRequest.open('GET',url,true);
-    myRequest.send(null);
+  myRequest.open('GET',url,true);
+  myRequest.responseText = 'json';
+  myRequest.send();
+  myRequest.onload = function() {
+    const quotes = myRequest.response;
+    console.log(quotes);
+    quoteButton(JSON.parse(quotes));
+    }
+
 }
 
-
 function tweetIt(){
+
     var url = "https://twitter.com/intent/tweet";
     var text = document.getElementById("message").innerHTML;
     var hashtags ="#";
@@ -29,12 +24,11 @@ function tweetIt(){
 
 }
 
-
 function quoteButton(quote){
     var color = ['#C73496','#0083AE','#EDAC19','#ED1604','#04A787'];
     var fontcolor = ['#181D26','#D9D9D9','#BFBFBF','#A5A6A1','#595956'];
     var bodyColor =['#310030','#023852','#03A694','#F24738','#851934'];
-    
+
     var element= document.getElementById("message");
     element.innerHTML= quote;
     element.style.color=fontcolor[Math.floor(Math.random()*color.length)];;
