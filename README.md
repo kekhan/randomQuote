@@ -1,8 +1,7 @@
 # How to Build A Random Quote Generator
-## Html set up
+## HTML set up
 This Section is about setting up the html file. The HTML file has the user interface. The user should be able to click on the get quote button and get a quote displayed inside the middle box. The user should be able to click on the tweet button and a sepereate twitter window should open. You need an index.html file. 
 
----
 
 Inside the body tag, you should have the following code. You can change the text inside the h1 tag. The two-button tags should have the onclick attribute. The onclick attribute connects javaScript functions to the html5.
 
@@ -11,55 +10,6 @@ Inside the body tag, you should have the following code. You can change the text
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="jquery.js"></script>
-<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-<!--Bootstrap from file in Fall2017 file-->
-<script src="js/bootstrap.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<!-- jquery space -->
-<script>
- $(document).ready(function(){
-	  //$("body").css("background","rgb(255,100,150");
-	  $("h1").addClass("text-center");
-	  $(".well").addClass("text-center");
-	  //How to change color of quotes
-	  //$("#message").css("font-color","blue");
-	  $()
-
-
-	  });
-</script>
-<script src ="randomQuote.js"></script>
-
-<style>
-.well{
-	border-radius: 20px solid black;
-}
-.display-box{
-	padding: 100px 30px 50px 30px;
-	margin: 10px 20px 10px 20px;
-	border-style: solid;
-	border-color:black;
-	color: white
-	border-radius:50%;
-	background-color: white;
-}
-h1{
-	color: white
-}
-body{
-	background-color: #310030;
-}
-
-
-</style>
 	<title> Random Quotes</title>
 </head>
 
@@ -87,7 +37,7 @@ body{
 
 ```
 
-## How to set up a Style sheet
+## How to set up a style sheet
 Next, style the HTML code. This section is about styling the html. The `<style>` tag is an internal style method. Use the following code to style the HTML:
 ```
 <style>
@@ -123,8 +73,11 @@ You should tweak the CSS code to fit your desired design
 The html5 file should look similar to the below picture
 <img width="1154" alt="Screen Shot 2021-11-04 at 11 09 29 PM" src="https://user-images.githubusercontent.com/33141258/141612944-9fb29565-e522-4195-9d57-ef8514c6662a.png">
 
-To get the button as above, you need to include bootstrap. Add the following line inside the header and keep the HTML code like the above HTML code.
+To get the button as above, you need to include bootstrap. Add the following line inside the header.
 `<link rel=”stylesheet” href=”https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">`
+
+If the bootstrap does not work, go to the following bootstrap website to get the latest bootstrap version:
+`https://getbootstrap.com/`
                                                                                                    
 ## JavaScript Set Up
 Next, create the JavaScript file.
@@ -142,7 +95,7 @@ get quote
 </button>
 ```
 
-## API
+## API Website
 This section is show you how to navigate https://www.programmableweb.com/. You will learn how to get an API endpoint and how to use that endpoint inside the Javascript code.
 The following images show you how to search and select an API from the programmable web:
 
@@ -165,6 +118,8 @@ The URL above uses the following api endpoint:
 https://ron-swanson-quotes.herokuapp.com/v2/quotes
 
 ## JavaScript Functions
+This section shows you which functions you will need. The html button will be linkded to these functions. You will need a function to call the API url, a function to display the quote and a function to tweet the quote.
+### API Response Function
 You need to create a function inside the javascript file for the above high lighted onclick function, “responseRequest()”
 The responseRequest function gets the third-party API request from programmable.com. The API will request data from a website and that website will return a JSON string with a quote. The next step shows how to get an API URL from the programmable web. The arrow points to the API endpoint URL. Use the following code to get an API from an external website:
 
@@ -185,18 +140,23 @@ function responseRequest(){
 
 }
 ```
+
 Every time you click the get quote button, a new response will come back.
 You can use the above API endpoint or choose another API endpoint. The response text will be a JSON object. JSON Objects include keys and values. The following is an example of a JSON object:
+
 JSON string to objects
 To display the quoted text, you need to convert the JSON string form into object form.
-JSON = {key:value,key:value}
+`JSON = {key:value,key:value}`
 The following is an example from the above API endpoint:
-[“I regret nothing. The end.”]
-Use JSON.parse() on the response to convert JSON from string to object form. The object form makes it easier to
+`[“I regret nothing. The end.”]`
+Use `JSON.parse()` on the response to convert JSON from string to object form. The object form makes it easier to
 Store the response into a variable called quotes, similar to the above code snippet.
-The next step is to call the quiteButton function. This button will display the quote on the browser screen.
-```
-```
+
+### Display quote in HTML
+
+This section will be about showing the parsed JSON object on the web browser. You will need to get the element where the quote goes. This section will also demonstate how you can change the background colors.
+
+The next step is to call the quoteButton function. This button will display the quote on the browser screen.
 
 You should rename the function to display_Quote(quote)
 In this function, display the quote using following:
@@ -221,7 +181,7 @@ function quoteButton(quote){
 }
 ```
 
-## Tweet Button
+### Tweet Button
 Use twitter’s URL that lets you tweet from external websites with the following code:
 var url = “https://twitter.com/intent/tweet";
 Assign the displayed quote to a variable. You need a hashtag so, assign a hashtag to a ‘#’. You also need a username that lets twitter know who is tweeting. Use twitter_user as a variable to assign ‘userName’.
