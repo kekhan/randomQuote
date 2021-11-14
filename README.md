@@ -185,9 +185,12 @@ function quoteButton(quote){
 ```
 
 ### Tweet Button
-Use twitter’s URL that lets you tweet from external websites with the following code:
-var url = “https://twitter.com/intent/tweet";
-Assign the displayed quote to a variable. You need a hashtag so, assign a hashtag to a ‘#’. You also need a username that lets twitter know who is tweeting. Use twitter_user as a variable to assign ‘userName’.
+Use the following twitter link to tweet your quote in an external window:
+
+`var url = “https://twitter.com/intent/tweet";`
+
+Assign the quote in the inner box to a variable. The quote from the inner box will be attached to the tweet url. Next, create a hashtag variable to be assign to '#'. 
+You also need a username that lets twitter know who is tweeting. Use twitter_user as a variable to assign ‘userName’.
 Get the quote’s id and by getting the element with the quote. Use the following code to tweet to Twitter.
 
 ```
