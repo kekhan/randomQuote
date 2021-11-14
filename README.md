@@ -106,11 +106,14 @@ Next, select any API from the following list
 
 <img width="946" alt="Screen Shot 2021-11-05 at 6 17 38 PM" src="https://user-images.githubusercontent.com/33141258/141613166-05aafc65-a91f-4622-9395-1134e53ffe7c.png">
 
-After you click on an API, the browser takes you to the API profile. Click on the title link to get the URL for the API.
 
-<img width="927" alt="Screen Shot 2021-09-27 at 11 47 43 PM" src="https://user-images.githubusercontent.com/33141258/141613181-34215e27-4eeb-4b7a-b33e-c58a2e03bc1e.png">
+After you click on an API, the browser takes you to the API profile. Click on the title link to go to the specs page. The Specs page will have an `API endpoint` for your code.
 
-After you click on the title link, the browser takes you to the specs page. Here, copy the API Endpoint. The API endpoint allows your code to communicate with this API.
+
+<img width="869" alt="Screen Shot 2021-11-05 at 6 18 02 PM" src="https://user-images.githubusercontent.com/33141258/141669098-42e15176-24ce-4f6c-ab5e-81671137151a.png">
+
+
+After you click on the `title` link, the browser takes you to the `specs page`. Here, copy the API Endpoint. The API `endpoint` allows your code to communicate with this API.
 
 <img width="711" alt="Screen Shot 2021-11-05 at 6 18 34 PM" src="https://user-images.githubusercontent.com/33141258/141613223-d0b5a276-e87d-4b73-8310-f7def55ed018.png">
 
