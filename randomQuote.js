@@ -25,18 +25,10 @@ function tweetIt(){
 }
 
 function quoteButton(quote){
-    var color = ['#C73496','#0083AE','#EDAC19','#ED1604','#04A787'];
-    var fontcolor = ['#181D26','#D9D9D9','#BFBFBF','#A5A6A1','#595956'];
-    var bodyColor =['#310030','#023852','#03A694','#F24738','#851934'];
-
     var element= document.getElementById("message");
     element.innerHTML= quote;
-    element.style.color=fontcolor[Math.floor(Math.random()*color.length)];;
     var box = document.getElementById('box');
-    box.style.background=color[Math.floor(Math.random()*color.length)];
     var innerbox = document.getElementsByClassName('well')[0];
-    innerbox.style.background=color[Math.floor(Math.random()*color.length)];
     var bodyCol = document.getElementById('body');
-    bodyCol.style.background=bodyColor[Math.floor(Math.random()*bodyColor.length)];
 
 }
