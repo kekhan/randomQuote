@@ -96,7 +96,13 @@ get quote
 ```
 
 ## API Website
-This section is show you how to navigate https://www.programmableweb.com/. You will learn how to get an API endpoint and how to use that endpoint inside the Javascript code.
+This section shows you how to navigate https://www.programmableweb.com/. (Unfortunately, the programmableweb.com site has been retired and no longer exists) You can use the following alternative API sites:
+
+* RapidAPI
+* Postman
+* APIfinder
+
+You will learn how to get an API endpoint and how to use that endpoint inside the Javascript code.
 The following images show you how to search and select an API from the programmable web:
 
 <img width="1284" alt="Screen Shot 2021-11-05 at 6 15 33 PM" src="https://user-images.githubusercontent.com/33141258/141613145-17f9e629-1744-4619-9e5e-a34830f2af9e.png">
